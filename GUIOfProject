@@ -39,7 +39,7 @@ public class HelloApplication extends Application {
             //System.out.println("---------------------------------------------------");
 
             Field EachField=field.next();
-            if(field instanceof ObjField objF){
+            if(EachField instanceof ObjField objF){
                 System.out.println("---------------------------------------------------");
                 Button BtObj=new Button(objF.getName());
                 BtObj.setOnAction(e->{
