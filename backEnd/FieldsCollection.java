@@ -9,4 +9,5 @@ import java.util.Iterator;
 public interface FieldsCollection {
     public Iterator<Field> getFields();
     public void addField(Field f);
+    public Field getFieldByIndex(int I);
 }
