@@ -42,6 +42,11 @@ public class Operation implements FieldsCollection{
     public void addField(Field f) {
         fields.add(f);
     }
+    
+    @Override
+    public Field getFieldByIndex(int I) {
+        return fields.get(I);
+    }
 
 }
 
