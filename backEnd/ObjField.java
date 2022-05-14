@@ -29,4 +29,9 @@ public class ObjField extends Field implements FieldsCollection{
     public void addField(Field f) {
         subFields.add(f);
     }
+    
+    @Override
+    public Field getFieldByIndex(int I) {
+        return subFields.get(I);
+    }
 }
