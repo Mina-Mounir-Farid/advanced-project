@@ -18,5 +18,8 @@ public class Service {
     public Iterator getOperations(){
         return operations.iterator();
     }
+   public Operation getOperationByIndex(int I) {
+        return operations.get(I);
+    }
     
 }
