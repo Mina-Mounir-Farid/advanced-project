@@ -59,10 +59,12 @@ public class HelloApplication extends Application {
                     btObj.setFont(new Font("BOLD",15));
                     //btObj.setPrefSize(100,100);
                     hBox.getChildren().add(btObj);
-                    hBox.setStyle("-fx-background-color: black ");
+                    hBox.setStyle("-fx-background-color: #fe5f55 ");
                     hBox.setPadding(new Insets(5,5,5,5));
                     btObj.setOnAction(e->{
                         VBox vBoxOfObj=new VBox();
+                        vBoxOfObj.setSpacing(5);
+                        vBoxOfObj.setPadding(new Insets(5,5,5,5));
                         for (int j=0;j<ObjF.getSizeOfSubField();j++){
                             if(ObjF.getFieldByIndex(j) instanceof StringField StringSub){
                                 String StData=StringSub.getDirection() + "\t" + StringSub.getName()+ "\t" + "string" +"\t" +Arrays.toString(StringSub.getAllowedVals())+"\t" + (StringSub.isMandatory()?"y":"N");
@@ -70,7 +72,7 @@ public class HelloApplication extends Application {
                                 Label lblSt=new Label(StData);
                                 lblSt.setFont(new Font("BOLD",16));
                                 vBoxOfObj.getChildren().add(lblSt);
-                                vBoxOfObj.setStyle("-fx-background-color: blue");
+                                vBoxOfObj.setStyle("-fx-background-color: #eef5d8");
 
                             }
                             else if(ObjF.getFieldByIndex(j) instanceof ObjField ObjSub){
@@ -88,6 +90,7 @@ public class HelloApplication extends Application {
                                             lblSt.setFont(new Font("BOLD",16));
                                             vBoxSubSub.getChildren().add(lblSt);
                                             vBoxOfObj.getChildren().add(vBoxSubSub);
+
                                         }
 
                                     }
@@ -95,7 +98,7 @@ public class HelloApplication extends Application {
 
                                 lblObj.setFont(new Font("BOLD",16));
                                 vBoxOfObj.getChildren().add(lblObj);
-                                vBoxOfObj.setStyle("-fx-background-color: Blue");
+                                vBoxOfObj.setStyle("-fx-background-color: #eef5d8");
 
                             }
                             pane.setCenter(vBoxOfObj);//pos
@@ -112,7 +115,7 @@ public class HelloApplication extends Application {
                         Label lblSt=new Label(StDataStringField);
                         lblSt.setFont(new Font("BOLD",16));
                         vboxOfNoChilds.getChildren().add(lblSt);
-                        vboxOfNoChilds.setStyle("-fx-background-color: Blue ");
+                        vboxOfNoChilds.setStyle("-fx-background-color: #eef5d8");
                         pane.setCenter(vboxOfNoChilds);
 
                     });
@@ -130,8 +133,8 @@ public class HelloApplication extends Application {
         lblDes.setTextFill(Color.RED);
         pane.setCenter(lblDes);
 
-        vBox.setStyle("-fx-background-color: #ddff00 ");
-        hBox.setAlignment(Pos.TOP_RIGHT);
+        vBox.setStyle("-fx-background-color: #7a9e9f ");
+        hBox.setAlignment(Pos.TOP_CENTER);
         pane.setTop(hBox);
         pane.setLeft(vBox);
         Scene scene = new Scene(pane, 1000, 500);
