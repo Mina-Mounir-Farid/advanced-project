@@ -109,9 +109,9 @@ public class sheetReader {
                             }
 
                             case 2 -> {
-                                if (cellValue.charAt(0) == 'S' || cellValue.charAt(0) == 's') {
+                                if (cellValue.equalsIgnoreCase("string")) {
                                     FB.type = Field.OBJ_TYPE.string;
-                                } else if (cellValue.charAt(0) == 'O' || cellValue.charAt(0) == 'o') {
+                                } else {
                                     FB.type = Field.OBJ_TYPE.object;
                                 }
                             }
